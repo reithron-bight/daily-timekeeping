@@ -1,10 +1,8 @@
-"use client";
-
 import { useEffect, useMemo, useState } from "react";
 
 const STORAGE_KEY = "minute-row-state-v1";
 const MAX_HISTORY = 10;
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 type TimerTarget =
   | { type: "entry"; entryId: string }

@@ -41,7 +41,7 @@ jobs:
       - name: Upload the site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./out
+          path: ./dist
 
       - name: Publish
         id: deployment
